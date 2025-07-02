@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Produção - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Produção</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Registro de Plantios, Criações e Colheitas</h2>
+        <p>Monitore o ciclo produtivo da sua propriedade, registrando cada etapa e os insumos utilizados.</p>
+
+        <h3>Registro de Atividade</h3>
+        <form>
+            <label for="tipoAtividade">Tipo de Atividade:</label>
+            <select id="tipoAtividade" name="tipoAtividade">
+                <option value="plantio">Plantio</option>
+                <option value="colheita">Colheita</option>
+                <option value="manejo">Manejo de Criação</option>
+                <option value="vendaAnimal">Venda de Animal</option>
+            </select>
+
+            <label for="dataAtividade">Data:</label>
+            <input type="date" id="dataAtividade" name="dataAtividade" required>
+
+            <label for="propriedadeAtividade">Propriedade/Área:</label>
+            <input type="text" id="propriedadeAtividade" name="propriedadeAtividade" placeholder="Ex: Fazenda Esperança - Talhão 1">
+
+            <label for="produtoAtividade">Cultura/Animal:</label>
+            <input type="text" id="produtoAtividade" name="produtoAtividade">
+
+            <label for="quantidadeProducao">Quantidade/Peso (kg/un):</label>
+            <input type="number" id="quantidadeProducao" name="quantidadeProducao" step="0.01">
+
+            <label for="insumosUtilizados">Insumos Utilizados:</label>
+            <textarea id="insumosUtilizados" name="insumosUtilizados" rows="3" placeholder="Ex: 50kg de semente, 100kg de fertilizante"></textarea>
+
+            <input type="submit" value="Registrar Produção">
+        </form>
+
+        <h3>Histórico de Produção</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Atividade</th>
+                    <th>Propriedade/Área</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-01-15</td>
+                    <td>Plantio</td>
+                    <td>Fazenda Esperança - Talhão 1</td>
+                    <td>Soja</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2025-05-20</td>
+                    <td>Colheita</td>
+                    <td>Fazenda Esperança - Talhão 1</td>
+                    <td>Soja</td>
+                    <td>5000 kg</td>
+                </tr>
+                <tr>
+                    <td>2025-03-10</td>
+                    <td>Manejo</td>
+                    <td>Sítio do Sol - Pasto A</td>
+                    <td>Gado de Corte</td>
+                    <td>Vacinação de 50 cabeças</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

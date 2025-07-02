@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culturas e Criações - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Culturas e Criações</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Gerenciamento de Culturas e Rebanhos</h2>
+        <p>Cadastre suas culturas e tipos de criações, definindo seus ciclos de produção.</p>
+
+        <h3>Nova Cultura</h3>
+        <form>
+            <label for="nomeCultura">Nome da Cultura:</label>
+            <input type="text" id="nomeCultura" name="nomeCultura" required>
+
+            <label for="cicloPlantio">Ciclo de Plantio (dias):</label>
+            <input type="number" id="cicloPlantio" name="cicloPlantio">
+
+            <label for="observacoesCultura">Observações:</label>
+            <textarea id="observacoesCultura" name="observacoesCultura" rows="3"></textarea>
+
+            <input type="submit" value="Salvar Cultura">
+        </form>
+
+        <h3>Novo Tipo de Criação</h3>
+        <form>
+            <label for="nomeCriacao">Tipo de Criação:</label>
+            <input type="text" id="nomeCriacao" name="nomeCriacao" required>
+
+            <label for="cicloCriacao">Ciclo de Criação (dias/meses):</label>
+            <input type="text" id="cicloCriacao" name="cicloCriacao">
+
+            <label for="observacoesCriacao">Observações:</label>
+            <textarea id="observacoesCriacao" name="observacoesCriacao" rows="3"></textarea>
+
+            <input type="submit" value="Salvar Criação">
+        </form>
+
+        <h3>Culturas Cadastradas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cultura</th>
+                    <th>Ciclo (dias)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Soja</td><td>120</td></tr>
+                <tr><td>Milho</td><td>150</td></tr>
+                <tr><td>Café</td><td>Variável</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Criações Cadastradas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Criação</th>
+                    <th>Ciclo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gado de Corte</td><td>24 meses</td></tr>
+                <tr><td>Frango de Corte</td><td>45 dias</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

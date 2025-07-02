@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Estoque</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Gerenciamento de Insumos e Produtos</h2>
+        <p>Acompanhe a entrada e saída de itens no seu estoque e receba alertas de baixa.</p>
+
+        <h3>Movimentação de Estoque</h3>
+        <form>
+            <label for="itemEstoque">Item:</label>
+            <input type="text" id="itemEstoque" name="itemEstoque" required>
+
+            <label for="tipoMovimento">Tipo de Movimento:</label>
+            <select id="tipoMovimento" name="tipoMovimento">
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+
+            <label for="quantidadeMovimento">Quantidade:</label>
+            <input type="number" id="quantidadeMovimento" name="quantidadeMovimento" step="0.01" required>
+
+            <label for="unidadeMovimento">Unidade:</label>
+            <input type="text" id="unidadeMovimento" name="unidadeMovimento" placeholder="Ex: kg, L, un">
+
+            <label for="dataMovimento">Data:</label>
+            <input type="date" id="dataMovimento" name="dataMovimento" required>
+
+            <input type="submit" value="Registrar Movimento">
+        </form>
+
+        <h3>Estoque Atual</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Unidade</th>
+                    <th>Alerta Mínimo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Semente de Soja</td><td>500</td><td>kg</td><td>100 kg</td></tr>
+                <tr><td>Fertilizante NPK</td><td>1000</td><td>kg</td><td>200 kg</td></tr>
+                <tr><td>Ração Bovina</td><td>2500</td><td>kg</td><td>500 kg</td></tr>
+                <tr class="low-stock"><td>Defensivo Agrícola X</td><td>10</td><td>L</td><td>15 L</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

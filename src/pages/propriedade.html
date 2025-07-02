@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro e Gestão de Propriedades</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Detalhes das Propriedades Rurais</h2>
+        <p>Gerencie informações completas de suas propriedades, como nome, localização, área total e áreas cultiváveis.</p>
+        <form>
+            <label for="nomePropriedade">Nome da Propriedade:</label>
+            <input type="text" id="nomePropriedade" name="nomePropriedade" required>
+
+            <label for="localizacao">Localização:</label>
+            <input type="text" id="localizacao" name="localizacao">
+
+            <label for="areaTotal">Área Total (ha):</label>
+            <input type="number" id="areaTotal" name="areaTotal" step="0.01">
+
+            <label for="areaCultivavel">Área Cultivável (ha):</label>
+            <input type="number" id="areaCultivavel" name="areaCultivavel" step="0.01">
+
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+            <input type="submit" value="Salvar Propriedade">
+        </form>
+
+        <h3>Propriedades Cadastradas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Localização</th>
+                    <th>Área Total (ha)</th>
+                    <th>Área Cultivável (ha)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fazenda Esperança</td>
+                    <td>Zona Rural, BA</td>
+                    <td>150.00</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>Sítio do Sol</td>
+                    <td>Linha Bonita, SP</td>
+                    <td>25.50</td>
+                    <td>20.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+
+</body>
+</html>

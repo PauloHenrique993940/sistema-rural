@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima e Previsão - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Clima e Previsão</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Monitoramento e Registro das Condições Climáticas</h2>
+        <p>Acompanhe a previsão do tempo para sua região e registre o histórico de condições climáticas importantes para sua produção.</p>
+
+        <h3>Previsão do Tempo (Exemplo)</h3>
+        <div class="weather-widget">
+            <p><strong>Cidade:</strong> Salvador, BA</p>
+            <p><strong>Data:</strong> 17/06/2025</p>
+            <p><strong>Temperatura:</strong> 28°C</p>
+            <p><strong>Condição:</strong> Ensolarado com algumas nuvens</p>
+            <p><strong>Chuva Prevista:</strong> 0mm</p>
+            <p><small>Dados simulados. Em um sistema real, haveria integração com API de clima.</small></p>
+        </div>
+
+        <h3>Registro Manual de Clima</h3>
+        <form>
+            <label for="dataClima">Data:</label>
+            <input type="date" id="dataClima" name="dataClima" required>
+
+            <label for="temperaturaClima">Temperatura (°C):</label>
+            <input type="number" id="temperaturaClima" name="temperaturaClima" step="0.1">
+
+            <label for="chuvaClima">Chuva (mm):</label>
+            <input type="number" id="chuvaClima" name="chuvaClima" step="0.1">
+
+            <label for="observacoesClima">Observações:</label>
+            <textarea id="observacoesClima" name="observacoesClima" rows="3"></textarea>
+
+            <input type="submit" value="Registrar Clima">
+        </form>
+
+        <h3>Histórico Climático</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Temperatura (°C)</th>
+                    <th>Chuva (mm)</th>
+                    <th>Observações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-06-16</td><td>27.5</td><td>5.2</td><td>Chuva leve pela manhã.</td></tr>
+                <tr><td>2025-06-15</td><td>29.0</td><td>0.0</td><td>Dia ensolarado.</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

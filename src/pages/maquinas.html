@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquinas e Equipamentos - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Máquinas e Equipamentos</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Cadastro e Manutenção de Equipamentos</h2>
+        <p>Gerencie seus tratores, colheitadeiras e outros implementos, registrando seu uso e manutenções.</p>
+
+        <h3>Novo Equipamento</h3>
+        <form>
+            <label for="nomeEquipamento">Nome/Modelo:</label>
+            <input type="text" id="nomeEquipamento" name="nomeEquipamento" required>
+
+            <label for="identificacao">Identificação/Número de Série:</label>
+            <input type="text" id="identificacao" name="identificacao">
+
+            <label for="dataAquisicao">Data de Aquisição:</label>
+            <input type="date" id="dataAquisicao" name="dataAquisicao">
+
+            <label for="horasUso">Horas de Uso Atuais:</label>
+            <input type="number" id="horasUso" name="horasUso" step="0.1">
+
+            <input type="submit" value="Salvar Equipamento">
+        </form>
+
+        <h3>Registro de Manutenção</h3>
+        <form>
+            <label for="equipamentoManutencao">Equipamento:</label>
+            <input type="text" id="equipamentoManutencao" name="equipamentoManutencao" required>
+
+            <label for="dataManutencao">Data da Manutenção:</label>
+            <input type="date" id="dataManutencao" name="dataManutencao" required>
+
+            <label for="tipoManutencao">Tipo de Manutenção:</label>
+            <input type="text" id="tipoManutencao" name="tipoManutencao" placeholder="Ex: Preventiva, Corretiva, Troca de Óleo">
+
+            <label for="custoManutencao">Custo (R$):</label>
+            <input type="number" id="custoManutencao" name="custoManutencao" step="0.01">
+
+            <label for="proximaManutencao">Próxima Manutenção (Data ou Horas):</label>
+            <input type="text" id="proximaManutencao" name="proximaManutencao">
+
+            <input type="submit" value="Registrar Manutenção">
+        </form>
+
+        <h3>Equipamentos Cadastrados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Equipamento</th>
+                    <th>Identificação</th>
+                    <th>Horas de Uso</th>
+                    <th>Última Manutenção</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Trator Massey Ferguson 290</td><td>MF290-001</td><td>2500 hrs</td><td>2025-04-10</td></tr>
+                <tr><td>Colheitadeira John Deere 1175</td><td>JD1175-002</td><td>1800 hrs</td><td>2025-03-20</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

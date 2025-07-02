@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Financeira - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão Financeira</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Controle de Receitas e Despesas</h2>
+        <p>Monitore suas finanças, registre entradas e saídas, e gere relatórios de fluxo de caixa.</p>
+
+        <h3>Novo Lançamento Financeiro</h3>
+        <form>
+            <label for="tipoLancamento">Tipo:</label>
+            <select id="tipoLancamento" name="tipoLancamento">
+                <option value="receita">Receita</option>
+                <option value="despesa">Despesa</option>
+            </select>
+
+            <label for="descricaoLancamento">Descrição:</label>
+            <input type="text" id="descricaoLancamento" name="descricaoLancamento" required>
+
+            <label for="valorLancamento">Valor (R$):</label>
+            <input type="number" id="valorLancamento" name="valorLancamento" step="0.01" required>
+
+            <label for="dataLancamento">Data:</label>
+            <input type="date" id="dataLancamento" name="dataLancamento" required>
+
+            <input type="submit" value="Registrar Lançamento">
+        </form>
+
+        <h3>Resumo Financeiro</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Valor (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-05-25</td><td class="receita">Receita</td><td>Venda de Soja (5000kg)</td><td>+ 15.000,00</td></tr>
+                <tr><td>2025-05-20</td><td class="despesa">Despesa</td><td>Compra de Fertilizante</td><td>- 2.500,00</td></tr>
+                <tr><td>2025-06-01</td><td class="despesa">Despesa</td><td>Salários Funcionários</td><td>- 3.000,00</td></tr>
+                <tr><td>2025-06-10</td><td class="receita">Receita</td><td>Venda de Gado (2 cabeças)</td><td>+ 8.000,00</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Saldo Atual: <span id="saldoAtual">R$ 17.500,00</span></strong></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

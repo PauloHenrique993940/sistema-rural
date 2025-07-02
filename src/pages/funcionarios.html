@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Funcionários - Sistema Rural</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Funcionários</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="propriedades.html">Propriedades</a></li>
+                <li><a href="culturas_criacoes.html">Culturas e Criações</a></li>
+                <li><a href="producao.html">Controle de Produção</a></li>
+                <li><a href="estoque.html">Controle de Estoque</a></li>
+                <li><a href="financeiro.html">Gestão Financeira</a></li>
+                <li><a href="maquinas.html">Máquinas e Equipamentos</a></li>
+                <li><a href="funcionarios.html">Gestão de Funcionários</a></li>
+                <li><a href="clima.html">Clima e Previsão</a></li>
+                <li><a href="relatorios.html">Relatórios Gerenciais</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h2>Cadastro e Controle de Atividades Diárias</h2>
+        <p>Cadastre seus funcionários e acompanhe suas atividades na propriedade.</p>
+
+        <h3>Novo Funcionário</h3>
+        <form>
+            <label for="nomeFuncionario">Nome Completo:</label>
+            <input type="text" id="nomeFuncionario" name="nomeFuncionario" required>
+
+            <label for="cargoFuncionario">Cargo:</label>
+            <input type="text" id="cargoFuncionario" name="cargoFuncionario">
+
+            <label for="dataContratacao">Data de Contratação:</label>
+            <input type="date" id="dataContratacao" name="dataContratacao">
+
+            <label for="salarioFuncionario">Salário (R$):</label>
+            <input type="number" id="salarioFuncionario" name="salarioFuncionario" step="0.01">
+
+            <input type="submit" value="Salvar Funcionário">
+        </form>
+
+        <h3>Registro de Atividade Diária</h3>
+        <form>
+            <label for="funcionarioAtividade">Funcionário:</label>
+            <input type="text" id="funcionarioAtividade" name="funcionarioAtividade" required>
+
+            <label for="dataAtividadeFuncionario">Data:</label>
+            <input type="date" id="dataAtividadeFuncionario" name="dataAtividadeFuncionario" required>
+
+            <label for="descricaoAtividade">Descrição da Atividade:</label>
+            <textarea id="descricaoAtividade" name="descricaoAtividade" rows="4"></textarea>
+
+            <input type="submit" value="Registrar Atividade">
+        </form>
+
+        <h3>Funcionários Cadastrados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Data Contratação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>João Silva</td><td>Tratorista</td><td>2020-01-10</td></tr>
+                <tr><td>Maria Souza</td><td>Auxiliar de Campo</td><td>2022-03-01</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema Rural. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>
