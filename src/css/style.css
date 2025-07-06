@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #7c4c46;
+    background-color: #36587A;
     color: white;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -44,7 +44,7 @@ h3 {
 
 .sidebar {
     width: 250px; /* Slightly wider sidebar */
-    background-color: #613934; /* White sidebar */
+    background-color: #273955;
     padding: 1.5rem;
     box-shadow: 2px 0 8px rgba(0,0,0,0.05);
     position: fixed;
@@ -76,16 +76,10 @@ h3 {
     font-weight: 500;
 }
 
-.sidebar nav ul li a:hover {
-    background-color: #a7736c; /* Light green on hover */
-    color: #2c1f1d;
-}
-
-/* Style for active link */
-.sidebar nav ul li a.active {
-    background-color: #221412;
-    color: white;
-    font-weight: bold;
+.sidebar a:hover,
+.sidebar .active {
+  background-color: #1B2E4A;
+  color: #ffffff;
 }
 
 
